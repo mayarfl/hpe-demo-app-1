@@ -89,6 +89,11 @@ public class TestA {
         Assert.assertEquals(query.isDisplayed(), true);
     }
 
+    @Test
+	public void testWithVeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeryLoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooongNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaame(){
+		System.out.println("This is a test with a very long name");	
+	}
+    
     @Category(SpecialTests.class)
     @Test
     @Ignore
