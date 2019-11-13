@@ -27,7 +27,7 @@ public class UtilsTest {
 	}
 
 	@Test
-	public void test1WithVeeonaaaaaaaaaaaaaaaaaaaaaaaaaaaaaame() {
+	public void test1WithVeeonaaaaaaaaame() {
 		String[] result = Utils.nodify("");
 		assertEquals(result.length, 0);         //  0 is the right answer
 	}
