@@ -74,9 +74,9 @@ public class UtilsTest {
 		assertEquals(true, true);
 	}
 
-	@Test
-	public void testSimpleLogical() {
-		boolean result = Utils.simpleLogical();
-		assertTrue(result);
-	}
+//	@Test
+//	public void testSimpleLogical() {
+//		boolean result = Utils.simpleLogical();
+//		assertTrue(result);
+//	}
 }
