@@ -9,7 +9,7 @@ variables:
   AlmOctaneConnection1: 'OctaneTest'
   AlmOctaneConnection1Workspaces: '6001'
   ALMOctaneLogLevel: 'debug'
-  GithubRepositoryConnection: 'mstekel'
+  GithubRepositoryConnection: 'GitHub connection'
 
 trigger:
 #- master
