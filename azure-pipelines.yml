@@ -4,13 +4,6 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-variables:
-  InjectAlmOctaneTasks: 'true'
-  AlmOctaneConnection1: 'OctaneTest'
-  AlmOctaneConnection1Workspaces: '6001'
-  ALMOctaneLogLevel: 'debug'
-  GithubRepositoryConnection: 'GitHub connection'
-
 trigger:
 #- master
   none
