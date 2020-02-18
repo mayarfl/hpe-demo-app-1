@@ -1,7 +1,7 @@
 @echo off
 rem This is a custom script written by TeamCity using windows-1252 charset.
 @echo off
-echo "The current directory is %CD%"
+echo  "The current directory is %CD%"
 git config --global user.email "evgene.lokshin@microfocus.com"
 git config --global user.name "lokshin"
 
