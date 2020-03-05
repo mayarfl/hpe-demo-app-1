@@ -47,6 +47,12 @@ jobs:
 
 - job: AlmOctanePipelineEnd
   condition: always()
+  steps:
+  - task: octane-end-task@1
+    inputs:
+      OctaneServiceConnection: 'qa8'
+      WorkspaceList: '1002'
+      GithubRepositoryConnection: 'mayarfl'
   dependsOn:
   - AlmOctanePipelineStart
   - A
