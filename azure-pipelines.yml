@@ -5,7 +5,7 @@
 
 variables:
   #InjectAlmOctaneTasks: 'true'
-  AlmOctaneConnection33: 'qa61'
+  AlmOctaneConnection33: 'qa8'
   AlmOctaneConnection33Workspaces: '1002'
   ALMOctaneLogLevel: 'debug'
   system.debug: 'true'
@@ -18,7 +18,7 @@ jobs:
   steps:
   - task: octane-start-task@1
     inputs:
-      OctaneServiceConnection: 'qa61'
+      OctaneServiceConnection: 'qa8'
       WorkspaceList: '1002'
       GithubRepositoryConnection: 'mayarfl'
 
