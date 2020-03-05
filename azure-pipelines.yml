@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 variables:
-  InjectAlmOctaneTasks: 'true'
+  #InjectAlmOctaneTasks: 'true'
   AlmOctaneConnection33: 'qa61'
   AlmOctaneConnection33Workspaces: '1002'
   ALMOctaneLogLevel: 'debug'
@@ -15,6 +15,12 @@ variables:
 jobs:
 - job: AlmOctanePipelineStart
   condition: always()
+  steps:
+  - task: octane-start-task@1
+    inputs:
+      OctaneServiceConnection: 'qa61'
+      WorkspaceList: '1002'
+      GithubRepositoryConnection: 'mayarfl'
 
 - job: A
   steps:
