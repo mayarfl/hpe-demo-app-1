@@ -6,7 +6,7 @@
 variables:
   #InjectAlmOctaneTasks: 'true'
   AlmOctaneConnection33: 'qa8'
-  AlmOctaneConnection33Workspaces: '1002,1003'
+  AlmOctaneConnection33Workspaces: '1002,26001'
   ALMOctaneLogLevel: 'debug'
   system.debug: 'true'
   system.debugContext: 'true'
