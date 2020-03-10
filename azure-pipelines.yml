@@ -12,6 +12,7 @@ variables:
   system.debugContext: 'true'
   GithubRepositoryConnection: 'mayarfl'
 
+
 jobs:
 - job: AlmOctanePipelineStart
   condition: always()
@@ -19,7 +20,7 @@ jobs:
   - task: octane-start-task@1
     inputs:
       OctaneServiceConnection: 'qa8'
-      WorkspaceList: '1002'
+      WorkspaceList: '1002,1003'
       GithubRepositoryConnection: 'mayarfl'
 
 - job: A
