@@ -16,11 +16,11 @@ jobs:
 - job: AlmOctanePipelineStart
   condition: always()
   steps:
-    - task: octane-start-task@1
-      inputs:
-        OctaneServiceConnection: 'qa8'
-        WorkspaceList: '1002, 26001'
-        GithubRepositoryConnection: 'mayarfl'
+  - task: octane-start-task@1
+    inputs:
+      OctaneServiceConnection: 'qa8'
+      WorkspaceList: '1002, 26001'
+      GithubRepositoryConnection: 'mayarfl'
 
 - job: A
   steps:
