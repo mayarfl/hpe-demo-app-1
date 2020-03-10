@@ -12,7 +12,6 @@ variables:
   system.debugContext: 'true'
   GithubRepositoryConnection: 'mayarfl'
 
-
 jobs:
 - job: AlmOctanePipelineStart
   condition: always()
