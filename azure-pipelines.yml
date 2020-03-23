@@ -3,15 +3,6 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-variables:
-  #InjectAlmOctaneTasks: 'true'
-  AlmOctaneConnection33: 'qa9'
-  AlmOctaneConnection33Workspaces: '31001'
-  ALMOctaneLogLevel: 'debug'
-  system.debug: 'true'
-  system.debugContext: 'true'
-  GithubRepositoryConnection: 'mayarfl'
-
 
 jobs:
 - job: AlmOctanePipelineStart
