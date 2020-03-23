@@ -3,6 +3,14 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+variables:
+  #InjectAlmOctaneTasks: 'true'
+  OctaneServiceConnection: 'qa9'
+  WorkspaceList: '31001'
+  ALMOctaneLogLevel: 'debug'
+  system.debug: 'true'
+  system.debugContext: 'true'
+  GithubRepositoryConnection: 'mayarfl'
 
 jobs:
 - job: AlmOctanePipelineStart
@@ -10,14 +18,18 @@ jobs:
   steps:
   - task: octane-start-task@1
     inputs:
-      OctaneServiceConnection: 'qa9'
-      WorkspaceList: '31001'
-      GithubRepositoryConnection: 'mayarfl'
+      OctaneServiceConnection: $(OctaneServiceConnection)
+      WorkspaceList: $(WorkspaceList)
+      GithubRepositoryConnection: $(GithubRepositoryConnection)
 
 - job: A
   steps:
   - script: echo Hello, Job A!
     displayName: 'Run a one-line script'
+  - task: octane-connection-verifier@1
+    inputs:
+      OctaneServiceConnection: $(OctaneServiceConnection)
+    
   dependsOn:
   - AlmOctanePipelineStart
 
@@ -42,9 +54,9 @@ jobs:
   steps:
   - task: octane-end-task@1
     inputs:
-      OctaneServiceConnection: 'qa9'
-      WorkspaceList: '31001'
-      GithubRepositoryConnection: 'mayarfl'
+      OctaneServiceConnection: $(OctaneServiceConnection)
+      WorkspaceList: $(WorkspaceList)
+      GithubRepositoryConnection: $(GithubRepositoryConnection)
   dependsOn:
   - AlmOctanePipelineStart
   - A
