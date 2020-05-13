@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 variables:
-  #InjectAlmOctaneTasks: 'true'
+  InjectAlmOctaneTasks: 'true'
   OctaneServiceConnection1: 'qa8'
   WorkspaceList1: '35013'
   ALMOctaneLogLevel: 'debug'
@@ -45,12 +45,7 @@ jobs:
 
 - job: AlmOctanePipelineEnd
   condition: always()
-  steps:
-  - task: octane-end-task@1
-    inputs:
-      OctaneServiceConnection: $(OctaneServiceConnection)
-      WorkspaceList: $(WorkspaceList)
-      GithubRepositoryConnection: $(GithubRepositoryConnection)
+ 
   dependsOn:
   - AlmOctanePipelineStart
   - A
