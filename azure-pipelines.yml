@@ -5,12 +5,14 @@
 
 variables:
   #InjectAlmOctaneTasks: 'true'
-  OctaneServiceConnection: 'demo'
-  WorkspaceList: '1002'
+  OctaneServiceConnection: 'qa8'
+  WorkspaceList: '35013'
   ALMOctaneLogLevel: 'debug'
   system.debug: 'true'
   system.debugContext: 'true'
   GithubRepositoryConnection: 'mayarfl'
+
+
 
 jobs:
 - job: AlmOctanePipelineStart
