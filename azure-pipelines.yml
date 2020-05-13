@@ -17,13 +17,21 @@ variables:
 jobs:
 - job: AlmOctanePipelineStart
   condition: always()
+  steps:
+  - task: octane-start-task@1
+    inputs:
+      OctaneServiceConnection: $(OctaneServiceConnection)
+      WorkspaceList: $(WorkspaceList)
+      GithubRepositoryConnection: $(GithubRepositoryConnection)
 
 
 - job: A
   steps:
   - script: echo Hello, Job A!
     displayName: 'Run a one-line script'
-    
+  - task: octane-connection-verifier@1
+    inputs:
+      OctaneServiceConnection: $(OctaneServiceConnection)
   dependsOn:
   - AlmOctanePipelineStart
 
@@ -45,7 +53,12 @@ jobs:
 
 - job: AlmOctanePipelineEnd
   condition: always()
- 
+  steps:
+  - task: octane-end-task@1
+    inputs:
+      OctaneServiceConnection: $(OctaneServiceConnection)
+      WorkspaceList: $(WorkspaceList)
+      GithubRepositoryConnection: $(GithubRepositoryConnection)
   dependsOn:
   - AlmOctanePipelineStart
   - A
