@@ -5,8 +5,8 @@
 
 variables:
   #InjectAlmOctaneTasks: 'true'
-  OctaneServiceConnection: 'qa8'
-  WorkspaceList: '35013'
+  OctaneServiceConnection1: 'qa8'
+  WorkspaceList1: '35013'
   ALMOctaneLogLevel: 'debug'
   system.debug: 'true'
   system.debugContext: 'true'
@@ -17,20 +17,12 @@ variables:
 jobs:
 - job: AlmOctanePipelineStart
   condition: always()
-  steps:
-  - task: octane-start-task@1
-    inputs:
-      OctaneServiceConnection: $(OctaneServiceConnection)
-      WorkspaceList: $(WorkspaceList)
-      GithubRepositoryConnection: $(GithubRepositoryConnection)
+
 
 - job: A
   steps:
   - script: echo Hello, Job A!
     displayName: 'Run a one-line script'
-  - task: octane-connection-verifier@1
-    inputs:
-      OctaneServiceConnection: $(OctaneServiceConnection)
     
   dependsOn:
   - AlmOctanePipelineStart
