@@ -13,7 +13,6 @@ variables:
   GithubRepositoryConnection: 'git'
 
 
-
 jobs:
 - job: AlmOctanePipelineStart
   condition: always()
