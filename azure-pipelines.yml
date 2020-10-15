@@ -6,11 +6,11 @@
 variables:
   InjectAlmOctaneTasks: 'true'
   OctaneServiceConnection: 'qa9'
-  WorkspaceList: '31001'
+  WorkspaceList: '1002'
   ALMOctaneLogLevel: 'debug'
   system.debug: 'true'
   system.debugContext: 'true'
-  GithubRepositoryConnection: 'mayarfl'
+  GithubRepositoryConnection: 'git'
 
 
 
