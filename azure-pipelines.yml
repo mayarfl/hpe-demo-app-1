@@ -5,8 +5,8 @@
 
 variables:
   InjectAlmOctaneTasks: 'true'
-  OctaneServiceConnection: 'qa9'
-  WorkspaceList: '1002'
+  OctaneServiceConnection: 'qa8'
+  WorkspaceList: '32003'
   ALMOctaneLogLevel: 'debug'
   system.debug: 'true'
   system.debugContext: 'true'
